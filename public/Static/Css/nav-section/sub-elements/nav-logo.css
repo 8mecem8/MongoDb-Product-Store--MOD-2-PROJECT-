@@ -1,0 +1,14 @@
+.nav-logo{
+    
+    font-family: "Monoton";
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+}
+
+.nav-logo header{font-size: 2.4rem;}
+
+.nav-logo span {font-family: monospace;font-size: 12px;}
+
+@media screen and (max-width: 390px) {.nav-logo{font-size: 1.1rem;padding: 0.5rem;}}
+
+

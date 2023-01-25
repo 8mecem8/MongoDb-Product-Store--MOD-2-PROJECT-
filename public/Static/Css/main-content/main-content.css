@@ -1,0 +1,26 @@
+@import url(main-content-section/main-content-section.css);
+
+
+.main-content{
+position: absolute;
+top: 0.5rem;
+right: 0.5rem;
+left: 0.5rem;
+bottom: 0.5rem;
+min-height: max-content;
+background-color: rgb(219 215 217 / 53%);
+border-radius: 10px;
+}
+
+
+@media screen and (max-width: 775px) {
+    .main-content{
+        
+        top: 0.15rem;
+        right: 0.15rem;
+        left: 0.15rem;
+        bottom: 0.15rem;
+        
+        }
+   
+  }

@@ -1,0 +1,39 @@
+
+
+.hero {
+    min-height: calc(100vh - 25rem);
+    background: url(https://cdn.shopify.com/s/files/1/0070/7032/files/trending-products_c8d0d15c-9afc-47e3-9ba2-f7bad0505b9b.png?format=jpg&quality=90&v=1614559651) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.banner {
+    text-align: center;
+    color: #DEDCDA;
+    text-transform: capitalize;
+    padding: 0.5rem 0.8rem;
+    line-height: 1;
+    font-size: 3rem;
+}
+
+
+.banner-btn {
+    font-size: 1.3rem;
+    background: #171717a1;
+    color: #DEDCDA;
+    width: 14rem;
+    height: 47px;
+    border-radius: 22px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    margin-top: 5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 900;
+    font-family: 'JuliusSansOne';
+}
+
+.banner-title{color: honeydew;font-family: 'Monoton';word-spacing: 4rem;}

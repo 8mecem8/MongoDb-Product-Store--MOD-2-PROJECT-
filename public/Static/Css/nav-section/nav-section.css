@@ -1,0 +1,14 @@
+@import url('sub-elements/nav-logo.css');
+@import url('sub-elements/nav-links.css');
+@import url('sub-elements/nav-icon--menu.css');
+
+
+.nav-section{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 13px 0px;
+
+}

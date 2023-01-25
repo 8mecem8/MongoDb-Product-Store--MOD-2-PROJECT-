@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Monoton;
+    src: url(./Monoton-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: JuliusSansOne;
+    src: url(./JuliusSansOne-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: AvenirL;
+    src: url(./AvenirLTStd-Book.ttf);
+  }
+  
+  @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,200;1,700&display=swap");
+
+
+
+
+:root {--inner-width: 0;} /* will be determined in js */  
+  
+
+  @media screen and (max-width: 1275px) {:root {--inner-width: calc(100vw / 1.2rem * 50);}}
+  @media screen and (max-width: 1100px) {:root {--inner-width: calc(100vw / 1.2rem * 40);}}
+  @media screen and (max-width: 950px) {:root {--inner-width: calc(100vw / 1.2rem * 38);}}
+  @media screen and (max-width: 820px) {:root {--inner-width: calc(100vw / 1.2rem * 33);}}
+  @media screen and (max-width: 620px) {:root {--inner-width: calc(100vw / 1.2rem * 29);}}
+  @media screen and (max-width: 320px) {:root {--inner-width: calc(100vw / 1.2rem * 15);}}

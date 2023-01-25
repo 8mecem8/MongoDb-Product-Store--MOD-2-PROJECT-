@@ -1,0 +1,125 @@
+.nav-links{
+    padding: 1rem;
+}
+
+.nav-links menu{
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+}
+
+
+.nav-links menu li{
+    position: relative;
+    font-family: JuliusSansOne;
+
+}
+
+
+
+
+/*-------------------------------- */
+.nav-links menu li ::before{
+    content: '';
+    background-color: black;
+    display: inline-block;
+    position: absolute;
+    height: 0.5px;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s ease-out;
+
+}
+
+
+.nav-links menu li :hover:before{
+    width: 100%;
+}
+/* -------------------------------- */
+
+
+
+
+.nav-selected::before{
+    content: '';
+    position: absolute;
+    top:0px;
+    left:41px;
+    
+    animation-name: linkSelectedAnimationBefore;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+}
+
+
+
+@keyframes linkSelectedAnimationBefore {
+    
+    to{content: '\250C';
+        position: absolute;
+        top:-15px;
+        left:-11px;
+    }
+}
+
+
+
+
+
+
+.nav-selected::after{
+    content: '\250C';
+    position: absolute;
+    transform: rotate(0.5turn);
+    bottom: 0px;
+    right: 23px;
+    
+    animation-name: linkSelectedAnimationAfter;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+@keyframes linkSelectedAnimationAfter {
+    
+    to{content: '\250C';
+        position: absolute;
+        bottom: -12px;
+        right: -10px;
+    }
+}
+
+
+
+/* @media screen and (max-width: 990px) {.nav-selected::before{top:-17px;left:-13px;}.nav-selected::after{bottom: -14px;}}
+@media screen and (max-width: 795px) {.nav-selected::before{top:-19px;left:-15px;}.nav-selected::after{bottom: -16px;}}
+@media screen and (max-width: 690px) {.nav-selected::before{top:-21px;left:-17px;}.nav-selected::after{bottom: -18px;}}
+ */
+
+
+
+
+
+/* Hide navigation links */
+@media screen and (max-width: 590px) {.nav-links{display: none;}}
+
+
+
+
+
+
+  /* navigation link gaps */
+@media screen and (max-width: 1440px) {.nav-links menu{gap: 5rem;}}
+@media screen and (max-width: 1110px) {.nav-links menu{gap: 4rem;}}
+@media screen and (max-width: 1040px) {.nav-links menu{gap: 2.5rem;}}
+@media screen and (max-width: 940px) {.nav-links menu{gap: 2rem;}}
+@media screen and (max-width: 880px) {.nav-links menu{gap: 1rem;}}
+/* navigation link gaps */

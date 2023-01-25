@@ -1,0 +1,18 @@
+@import url(./sub-elements/hero-section.css);
+@import url(./sub-elements/product-card-gallery.css);
+
+
+.main-content-section{
+    padding: 1rem;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 5rem 0px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+.MMenu-extra{
+    order: 2;
+    flex-grow: 1;
+
+}
+
+
+.MMenu-extra menu{
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.MMenu-extra li{
+    line-height: normal;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.MMenu-extra menu li a img[alt="instagram"]{
+    border-radius: 8px;
+    
+}
+
+
+.MMenu-extra li img:nth-of-type(1){
+    border-radius: 14px;
+    
+}
+
+.MMenu-extra li:hover{
+    filter: invert();
+    
+}

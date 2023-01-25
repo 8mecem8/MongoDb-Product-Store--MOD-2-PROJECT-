@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
+    -webkit-text-stroke: 1px transparent;
+    user-select: none;
+  }
+  
+  html {
+    /*font-size: 62.5%;  (standard size of font)16px * 62.5 = 10px = 1rem for to be reponsive */
+    font-size: 1.2rem;
+    font-family: Raleway, sans-serif;
+    will-change: auto;
+  }
+  
+  
+  
+  body {
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+
+  footer{
+    position: fixed;
+    padding-left: 20px;
+    bottom: 0px;
+    left: 0px;
+  }
+  
+  
+  /******************************************************************/
+/* ---------------------Font Sizes---------------------- */
+  @media screen and (max-width: 1275px) {html {font-size: calc(100vw / var(--inner-width) * 50);}}
+  @media screen and (max-width: 1100px) {html {font-size: calc(100vw / var(--inner-width) * 40);}}
+  @media screen and (max-width: 950px) {html {font-size: calc(100vw / var(--inner-width) * 38);}}
+  @media screen and (max-width: 820px) {html {font-size: calc(100vw / var(--inner-width) * 33);}}
+  @media screen and (max-width: 620px) {html {font-size: calc(100vw / var(--inner-width) * 29);}}
+  @media screen and (max-width: 320px) {html {font-size: calc(100vw / var(--inner-width) * 15);}}
+
+
+
+
+
+/******************************************************************/
+/* ---------------------Scroll Bar Styleing---------------------- */
+
+  /* width */
+::-webkit-scrollbar {
+  width: 4px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

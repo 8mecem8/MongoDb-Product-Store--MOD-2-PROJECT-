@@ -1,0 +1,73 @@
+@import url(Sub-Elements/MMenu-links.css);
+@import url(Sub-Elements/MMenu-extra.css);
+
+.MMenu-section{
+    position: fixed;
+    width: 90%;
+    height: 90%;
+    background-color: #0a2858;
+    color: aliceblue;
+    z-index: 3;
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -ms-flex-item-align: center;
+    justify-content: center;
+    justify-items: center;
+    transform: translate(-50 -50);
+    align-items: center;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    gap: 1.6rem;
+    transform: translate3d(calc(6%), 0px, 10px);
+    
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    
+}
+
+.MMenu-section::before{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 400%;
+    background: linear-gradient(#00ccff,#d500f9);
+    
+    animation: rotateBackground 4s linear infinite;
+}
+
+
+.MMenu-section::after{
+    content: '';
+    position: absolute;
+    background: #111112;
+    border-radius: 0.3rem;
+    inset: 5px;
+}
+
+
+
+
+@keyframes rotateBackground {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg)}
+}
+
+
+@keyframes appear {
+    from{transform: translateY(-130vh);}
+    to{transform: translateY(-50)}
+}
+
+@keyframes disappear {
+    from{transform: translateY(-50);}
+    to{transform: translateY(-160vh)}
+}
+
+
+
+/* @media screen and (max-width: 590px) {.MMenu-section{display: flex;}} */
+@media screen and (max-width: 494px) {.MMenu-section::before{width: 50%;}}

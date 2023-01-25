@@ -1,0 +1,48 @@
+
+
+.MMenu-links{
+    display: flex;
+    align-items: center;
+    order: 1 ;
+    flex-grow: 5;
+}
+
+
+.MMenu-links  li{
+    position: relative;
+    z-index: 1;
+    line-height: 78px;
+    transform: translateY(34px);
+    letter-spacing: 16px;
+    
+    
+}
+
+
+.MMenu-links  li a{
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+    font-size: 6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 855px) {.MMenu-links  li a{font-size: 2rem;} .MMenu-links  li{line-height: 45px;}}
+
+
+.MMenu-links  li a::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #d8315b;
+    -webkit-text-stroke: 1px #d8315b;
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    transition: 0.55s ease-in-out;
+}
+
+
+.MMenu-links  li a:hover::before{
+    height: 100%;
+    filter: drop-shadow(0 0 20px #d8315b);
+}
