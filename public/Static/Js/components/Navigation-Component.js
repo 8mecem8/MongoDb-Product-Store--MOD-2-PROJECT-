@@ -10,7 +10,7 @@ export default async function Navigation(props)
             <section class="nav-icon--menu">
 
                 <header>
-                    <button class='icon-menu-button'>&#9776;</button>
+                    <button class='icon-menu-button'>&#9776;<span>enu</span></button>
                 </header>
             
             </section>

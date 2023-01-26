@@ -9,6 +9,10 @@
 
 .nav-logo span {font-family: monospace;font-size: 12px;}
 
-@media screen and (max-width: 390px) {.nav-logo{font-size: 1.1rem;padding: 0.5rem;}}
+@media screen and (max-width: 500px) 
+{
+    .nav-logo{padding: unset;}
+    .nav-logo header{font-size: 1.5rem;}
+}
 
 

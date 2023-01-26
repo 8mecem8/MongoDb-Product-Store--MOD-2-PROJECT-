@@ -12,3 +12,5 @@
     margin: 13px 0px;
 
 }
+
+@media screen and (max-width: 500px) {.nav-section{margin:unset}}

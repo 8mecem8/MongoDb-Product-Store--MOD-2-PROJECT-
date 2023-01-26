@@ -1,6 +1,7 @@
 import Navigation from '../components/Navigation-Component.js'
 import MMenu from '../components/Mobile-Menu.js'
 import { iconMenuButtonFunction,getAllProducts } from '../Sup-files/Util.js'
+import showOneItem from '../components/OneProduct.js'
  
 
 
@@ -17,7 +18,7 @@ class Home
         this.homeEl.id = 'HomeMainContainer'
 
         this.allProducts
-
+    
         
     }
 
@@ -76,9 +77,10 @@ class Home
             ${
                 this.allProducts.map((arg)=>
                 {   console.log(arg)
+                    
                     return`
 
-                    <div class="card-product" p-id="${arg._id}" >
+                    <div class="card-product" style="height:${arg.name.length > 29 ? '356px' : '336px' }" p-id="${arg._id}" >
 
                             
                             <div class="images-container">
@@ -88,13 +90,13 @@ class Home
                             </div>
 
                             <div class="product-image">
-                                <img src='${arg.imageURL}'/>
+                                <img  id='${arg._id}' src='${arg.imageURL}'/>
                             </div>
 
                             <div class="headline">
                                 <p>${arg.category}</p>
-                                <p>${arg.name}</p>
-                                <p>$ ${arg.price} +<span style="font-size:12px;">TAX</span></p>
+                                <p onclick="showOneItem" id='${arg._id}'>${arg.name}</p>
+                                <p>$ ${arg.price} <span style="font-size:12px;">+TAX</span></p>
                             </div>
 
                             <div class="add-cart-btn">
@@ -128,8 +130,9 @@ class Home
 
 
 
+    Array.from(document.querySelectorAll('.product-image')).map((arg)=>{arg.addEventListener('click',(arg)=>{showOneItem(arg.target.id)})})
 
-    //document.querySelector("video").src = "../Static/Assets/intro-3.ogv"
+    //document.querySelector("video").src = "../Static/Assets/intro-3.ogv" this.getAttribute('name')
     }
 }
 

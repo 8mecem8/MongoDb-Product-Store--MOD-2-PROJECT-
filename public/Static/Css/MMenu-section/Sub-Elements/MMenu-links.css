@@ -7,6 +7,37 @@
     flex-grow: 5;
 }
 
+.MMenu-links menu{
+    width: 50vw;
+    border-right: 2px #c1a3a3 solid;
+    display: grid;
+    height: 41vh;
+    place-items: end;
+    align-items: baseline;
+    z-index: 99;
+}
+
+@media screen and (max-width: 1654px) 
+{
+    .MMenu-links menu{width: 54vw;border-right: 2px #c1a3a3 solid;display: grid;height: 41vh; place-items: end; align-items: baseline;}
+}
+@media screen and (max-width: 1527px) 
+{
+    .MMenu-links menu{width: 65vw;border-right: 2px #c1a3a3 solid;display: grid;height: 41vh; place-items: end; align-items: baseline;}
+}
+@media screen and (max-width: 1145px) 
+{
+    .MMenu-links menu{width: 76vw;border-right: 2px #c1a3a3 solid;display: grid;height: 41vh; place-items: end; align-items: baseline;}
+}
+@media screen and (max-width: 927px) 
+{
+    .MMenu-links menu{width: 89vw;border-right: 2px #c1a3a3 solid;display: grid;height: 41vh; place-items: end; align-items: baseline;}
+}
+@media screen and (max-width: 855px) 
+{
+    .MMenu-links menu{width: 89vw;display: grid;height: 43vh;place-items: center;align-items: baseline;border: none;}
+}
+
 
 .MMenu-links  li{
     position: relative;
@@ -21,13 +52,13 @@
 
 .MMenu-links  li a{
     color: transparent;
-    -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+    -webkit-text-stroke: 9px rgb(255 255 255);
     font-size: 6rem;
     font-weight: 800;
     text-transform: uppercase;
 }
 
-@media screen and (max-width: 855px) {.MMenu-links  li a{font-size: 2rem;} .MMenu-links  li{line-height: 45px;}}
+@media screen and (max-width: 855px) {.MMenu-links  li a{font-size: 4rem;-webkit-text-stroke: 4px rgb(255 255 255);} .MMenu-links  li{line-height: 71px;}}
 
 
 .MMenu-links  li a::before{

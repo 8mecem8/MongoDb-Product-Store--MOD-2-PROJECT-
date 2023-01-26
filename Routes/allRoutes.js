@@ -49,11 +49,11 @@ exports.startAllRoutes = (app)=>
 
 
       app.get("/get_specific_product/:product_id", async (req, res) => {
-        let product = req.params.product_id;
+        let pId = req.params.product_id;
+        
+        //let regex = new RegExp(["^", productToShow, "$"].join(""), "i");
       
-        let regex = new RegExp(["^", productToShow, "$"].join(""), "i");
-      
-        let productRes = await product.find({ name: regex });
+        let productRes = await product.find({"_id" :`${pId}`});
       
         res.json(productRes);
       });

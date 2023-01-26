@@ -8,8 +8,9 @@ right: 0.5rem;
 left: 0.5rem;
 bottom: 0.5rem;
 min-height: max-content;
-background-color: rgb(219 215 217 / 53%);
+/* background-color: rgb(219 215 217 / 53%); */
 border-radius: 10px;
+place-items: center;
 }
 
 

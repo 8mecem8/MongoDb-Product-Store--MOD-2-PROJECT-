@@ -1,17 +1,20 @@
 
 .card-product {
-    
     border-radius: 27px;
     width: 93%;
-    height: 475px;
+    height: 336px;
     border-top: 1px solid rgba(255,255,255,0.4);
     border-left: 1px solid rgba(255,255,255,0.2);
     transition: .5s;
-    margin: 20px 0px;
+    margin: 65px 0px;
  }
 
+
+
+
+
  .card-product:hover {
-    height: 535px;
+    
     box-shadow: 0 7px 15px rgb(0 0 0 / 25%);
  }
 
@@ -31,22 +34,22 @@
     border-top-left-radius: 27px;
     border-top-right-radius: 27px;
     }
+
  .product-image img{
     display: block;
     width: 100%;
-    height: 20rem;
-    min-height: 12rem;
-    object-fit: fill;
+    height: 10rem;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
  }
     
  .images-container {
     /* transform: translatey(-31px) translateX(55px) rotate(25deg); */
-    width: 28%;
+    transform: translatey(-26px) translateX(-20px) rotate(-17deg);
+    width: 22%;
     height: 156px;
     z-index: 2;
     position: relative;
-    left: -5px;
-    top: -87px;
  }
  
  .images-container img {
@@ -66,13 +69,13 @@
   
   .images-container img:nth-child(2){
     /* transform: rotate(-11deg) translateX(48px) translateY(-27px); */
-    transform: rotate(0deg) translateX(39px) translateY(-23px);
+    transform: rotate(0deg) translateX(49px) translateY(-14px);
     z-index: 1;
   }
   
   .images-container img:nth-child(3){
       /* transform: rotate(5deg) translateX(83px) translateY(-45px); */
-      transform: rotate(35deg) translateX(61px) translateY(-50px);
+      transform: rotate(40deg) translateX(74px) translateY(-49px);
     z-index: 0;
   }
   
@@ -118,13 +121,14 @@
   
   .add-cart-btn button {
     color: rgb(0, 0, 0);
-    font-size: 28px;
+    font-size: 21px;
     grid-column: 3/7;
     cursor: pointer;
   }
 
   .add-cart-btn span {
     grid-column: 1/3;
+    font-size: 16px;
   }
 
 
@@ -151,3 +155,31 @@
 }
   
   
+
+
+@media screen and (max-width: 719px) 
+{
+    .product-image img{height: 8rem;}
+    .card-product {height: 17.5rem !important;}
+    .headline {height: 98px;}
+}
+
+@media screen and (max-width: 581px) 
+{
+    .product-image img{height: unset;aspect-ratio: 5.5 / 3}
+    .card-product {height: 23.5rem !important;}
+   
+
+}
+@media screen and (max-width: 570px) 
+{
+    .product-image img{height: unset;aspect-ratio: 5.5 / 3}
+    .card-product {height: calc(42% - 30% + 62% - 2rem) !important;}
+   
+}
+@media screen and (max-width: 400px) 
+{
+    .product-image img{height: unset;aspect-ratio: 5.5 / 3}
+    .card-product {height: calc(252px - 30% + 62% - 2rem)  !important;margin: unset !important;}
+   
+}

@@ -2,11 +2,10 @@
     
 }
 
-.nav-icon--menu header{
-    display: block;
-}
 
+.nav-icon--menu header{display: block;}
 
+.nav-icon--menu  span{font-family: 'JuliusSansOne'; font-size: 13px;}
 
 
 
@@ -20,3 +19,5 @@
     font-style: italic;
     text-decoration: underline;
 }
+
+@media screen and (max-width: 500px) {.nav-icon--menu button{font-size: 1rem;}}

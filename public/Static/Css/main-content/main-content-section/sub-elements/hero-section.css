@@ -37,3 +37,9 @@
 }
 
 .banner-title{color: honeydew;font-family: 'Monoton';word-spacing: 4rem;}
+
+@media screen and (max-width: 500px) 
+{
+    .banner-title{word-spacing: 4rem;font-size: 41px;line-height: 75px;}
+    .banner-btn {font-size: 15px;width: 11rem;height: 42px;margin-top: 1rem;margin-bottom: 1rem;}
+}

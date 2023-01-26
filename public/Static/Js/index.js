@@ -1,6 +1,9 @@
 import setResponsiveFontsize from './Sup-files/ResponsiveFontSizes.js'
 import {home} from './Route-Pages/Home.js'
 
+
+
+
 /******************************************************************/
 /* ---------------Responsive Font Size Function------------------ */
 setResponsiveFontsize()
@@ -22,8 +25,6 @@ async function Start()
     //Execute if there is post-render helper funcition 
     home._uti_Func ? await home._uti_Func() : null
 }
-
-
 
 
 
