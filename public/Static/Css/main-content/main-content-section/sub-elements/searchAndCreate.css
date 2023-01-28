@@ -62,6 +62,22 @@
 
 
 
+#search-show-con
+{
+    display: none;
+    position: absolute;
+    width: 32rem;
+    height: 10px;
+    background: #a52a2a;
+    z-index: 5;
+    transform: translate(31%, 27%);
+    border-radius: 27px;
+    padding: 20px;
+    transition: all 2s;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: repeat(3,1fr);
+}
+
 
 
 
@@ -123,3 +139,45 @@
     width: 100vh;
 }
   
+
+
+
+
+
+
+
+#filtered-product
+{
+    background: #0000004f;
+    border-radius: 20px;
+    width: 7rem;
+    margin-bottom: 11px;
+    display: none;
+    transition: all 1s;
+    scale: 0;
+    max-height: 9rem;
+    cursor: pointer;
+}
+
+
+#filtered-product img
+{
+    display: block;
+    width: 7rem;
+    height: 5rem;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    
+    border-radius: 20px;
+}
+
+
+#filtered-product p
+{
+    width: 7rem;
+    height: 4rem;
+    font-size: 16px;
+    font-family: 'AvenirL';
+    padding: 7px;
+    line-height: 23px;
+}

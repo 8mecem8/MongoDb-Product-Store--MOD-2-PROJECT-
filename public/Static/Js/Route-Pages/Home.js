@@ -17,7 +17,6 @@ class Home
         this.fragment = document.createDocumentFragment() // create and append new elements faster with method
         this.homeEl = document.createElement("div");
         this.homeEl.id = 'HomeMainContainer'
-
         this.allProducts
     
         
@@ -72,6 +71,7 @@ class Home
                 <div class="search">
                     <div>
                         <input type="text" placeholder="Search . . ." required>
+                        <div id='search-show-con'></div>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@ class Home
 
             ${
                 this.allProducts.map((arg)=>
-                {   console.log(arg)
+                {  
                     
                     return`
 
@@ -151,12 +151,83 @@ class Home
 
     Array.from(document.querySelectorAll('.product-image')).map((arg)=>{arg.addEventListener('click',(e)=>{showOneItem(e.target.id)})})
     
+    
 
     document.querySelector("#create-p").addEventListener("click",()=>{createNewProduct()})
+    document.querySelector(".search input").addEventListener('input',(e)=>
+    {
+        
+        document.querySelector("#search-show-con").style.display = "grid"
+        setTimeout(() => 
+        {
+        document.querySelector("#search-show-con").style.height= "399px"
+        document.querySelector("#search-show-con").style.background= "#198f999e"
+        }, 50);
+        
+
+        let filteredData = this.allProducts.filter((arg)=>
+        {
+           return arg.name.toLowerCase().includes(e.target.value.toLowerCase().trim())
+        })
+
+        console.log(filteredData)
+
+        document.querySelector("#search-show-con").innerHTML = `
+
+                ${
+                    filteredData.map((arg)=>
+                    {
+                        return`
+                        
+                        <div id="filtered-product" pid="${arg._id}">
+                            <img src="${arg.imageURL}" pid="${arg._id}">
+                            <p pid="${arg._id}">${arg.name}</p>
+                        </div>
+                        
+                        
+                        `
+                    }).join('\n')
+
+                }
+        
+        `
+                
+
+            Array.from(document.querySelectorAll("#filtered-product")).map(arg=>
+                {
+                    arg.addEventListener('click',async(e)=>
+                    {
+                        
+                        document.querySelector(".search input").value = ""
+                        document.querySelector("#search-show-con").style.display = "none"
+                        await showOneItem(e.target.getAttribute('pid'))
+                    })
+                })
+            
+        
+            setTimeout(() => {Array.from(document.querySelectorAll("#filtered-product")).map(arg=>{arg.style.display = "block"})}, 1000);
+            setTimeout(() => {Array.from(document.querySelectorAll("#filtered-product")).map(arg=>{arg.style.scale = "1"})}, 1300);
+         
+    })
+
+    document.querySelector(".search input").addEventListener('keyup',()=>
+    {
+
+        if(document.querySelector(".search input").value.length < 1)
+        {
+            
+            document.querySelector("#search-show-con").style.height= "0px"
+            Array.from(document.querySelectorAll("#filtered-product")).map(arg=>{arg.style.display = "none";arg.style.scale = "0"})
+            setTimeout(() =>
+            {
+            document.querySelector("#search-show-con").style.display = "none"
+            document.querySelector("#search-show-con").style.background= "#a52a2a"
+            }, 1000);
+        }
+    })
 
 
-
-
+    
 
     }
 }
