@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "latest",
+    "canvas-confetti": "^1.6.0",
     "cors": "latest",
     "dotenv": "latest",
     "express": "latest",

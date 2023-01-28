@@ -41,6 +41,7 @@
     height: 10rem;
     object-fit: cover;
     aspect-ratio: 4 / 3;
+    cursor: pointer;
  }
     
  .images-container {
@@ -94,7 +95,7 @@
 
   .headline  p:nth-child(1){font-weight: 100;font-size: 14px;text-align: left;;margin-bottom: 8px;}
   .headline  p:nth-child(2){font-weight: 600;text-align: left;;}
-  .headline  p:nth-child(3){font-family: 'AvenirL';font-weight: 100;color: #cc3333;;text-align: left;;}
+  .headline  p:nth-child(3){font-family: 'AvenirL';font-weight: 100;color: #cc3333;text-align: left;}
 
   
   .add-cart-btn {

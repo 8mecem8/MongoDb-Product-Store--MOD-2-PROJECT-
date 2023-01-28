@@ -1,0 +1,125 @@
+#searchAndCreate-container
+{
+        
+}
+
+
+
+#searchAndCreate-search
+{
+    background: brown;
+    border-radius: 40px;
+    width: max-content;
+    place-self: center;
+}
+
+
+
+#searchAndCreate-create
+{
+    grid-area: 2/1/2/6;
+    width: 100%;
+    height: 100px;
+}
+
+
+#create-wrapper
+{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+
+#create-p
+{
+    display: grid;
+    height: 81px;
+    justify-content: center;
+    width: 230px;
+    background: antiquewhite;
+    align-content: center;
+    border-radius: 17px;
+    font-family: 'AvenirL';
+    cursor: pointer;
+    position: fixed;
+    transform: rotateZ(-90deg);
+    transform-origin: right;
+    right: 52px;
+    bottom: 199px;
+    z-index: 99;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search
+{
+    padding: 30px;
+}
+
+
+
+.search > div 
+{
+    display: grid;
+    position: relative;
+    filter: drop-shadow(0 1px #0091c2);
+}
+  
+.search > div:after 
+{
+    content: "";
+    background: white;
+    width: 4px;
+    height: 20px;
+    position: absolute;
+    top: 43px;
+    right: 0px;
+    transform: rotate(135deg);
+}
+  
+.search > div > input 
+{
+    color: white;
+    font-size: 16px;
+    background: transparent;
+    width: 52px;
+    height: 52px;
+    padding: 10px;
+    border: solid 3px white;
+    outline: none;
+    border-radius: 35px;
+    transition: width 0.5s;
+}
+  
+.search > div > input::placeholder 
+{
+    color: #efefef;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+  
+.search > div > input:focus::placeholder 
+{
+    opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) 
+{
+    width: 100vh;
+}
+  

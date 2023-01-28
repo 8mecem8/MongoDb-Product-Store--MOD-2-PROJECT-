@@ -25,6 +25,9 @@
     overflow-x: hidden;
   }
   
+  canvas{
+    z-index: 99 !important;
+  }
 
   footer{
     position: fixed;

@@ -1,6 +1,9 @@
 @import url(./sub-elements/hero-section.css);
 @import url(./sub-elements/product-card-gallery.css);
 @import url(./sub-elements/one-product.css);
+@import url(./sub-elements/edit-Delete.css);
+@import url(./sub-elements/searchAndCreate.css);
+@import url(./sub-elements/create-new-Product.css);
 
 
 .main-content-section{
@@ -8,7 +11,7 @@
     background: white;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    margin: 5rem 0px;
+    margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 2000px) {.main-content-section{grid-template-columns: repeat(6, 1fr);}}

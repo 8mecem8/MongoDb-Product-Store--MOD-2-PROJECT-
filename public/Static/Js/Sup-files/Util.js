@@ -11,6 +11,52 @@ export async function getAllProducts()
 }
 
 
+export async function makeBuy(id)
+{
+  let rData={'type':'buy','pID':id}
+
+  let response = await fetch("/update_product",{method:'PUT',headers: {'Content-Type': 'application/json'},body: JSON.stringify(rData)})
+  let data = await response.json()
+  
+  return data
+}
+
+
+
+export async function updateProduct(id,updatedProduct)
+{
+  let rData={'type':'update','pID':id, 'updatedProduct':updatedProduct}
+
+  let response = await fetch("/update_product",{method:'PUT',headers: {'Content-Type': 'application/json'},body: JSON.stringify(rData)})
+  let data = await response.json()
+  
+  return data
+}
+
+
+
+export async function deleteProduct(id)
+{
+  let response = await fetch(`/delete_product?productId=${id}`,{method:'DELETE',headers: {'Content-Type': 'application/json'}})
+  let data = await response.json()
+  
+  return data
+}
+
+
+export async function createProduct(sData)
+{
+  
+
+  let response = await fetch("/create_product",{method:'POST',headers: {'Content-Type': 'application/json'},body: JSON.stringify(sData)})
+  let data = await response.json()
+  
+  return data
+}
+
+
+
+
 
 export const iconMenuButtonFunction = () =>
 { 

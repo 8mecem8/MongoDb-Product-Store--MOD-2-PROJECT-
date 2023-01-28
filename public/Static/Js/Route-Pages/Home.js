@@ -2,6 +2,7 @@ import Navigation from '../components/Navigation-Component.js'
 import MMenu from '../components/Mobile-Menu.js'
 import { iconMenuButtonFunction,getAllProducts } from '../Sup-files/Util.js'
 import showOneItem from '../components/OneProduct.js'
+import createNewProduct from '../components/CreateNewProduct.js'
  
 
 
@@ -67,11 +68,29 @@ class Home
             <div class="banner">
                 <h1 class="banner-title">Products  Store  collection</h1>
                 <button class="banner-btn">shop now</button>
+                <div id="searchAndCreate-search">
+                <div class="search">
+                    <div>
+                        <input type="text" placeholder="Search . . ." required>
+                    </div>
+                </div>
+            </div>
             </div>
         </header>
 
-        <section class='main-content-section'>
+        <section id="searchAndCreate-container">
+            
 
+            <div id="searchAndCreate-create">
+                <div id="create-wrapper">
+                    <button id="create-p">Create New Product</button>
+                <div>
+            </div>
+        </section>
+
+
+
+        <section class='main-content-section'>
 
 
             ${
@@ -101,7 +120,7 @@ class Home
 
                             <div class="add-cart-btn">
                                 <span> STOCK: <span style="font-weight: 600 ;color:${arg.amount < 1 && arg.inStock == false ? 'red' : 'green' }">${arg.amount}</span></span>
-                                ${arg.amount < 1 && arg.inStock == false ? '<button type="button" disabled>OUT OF STOCK</button>' : '<button type="button">Add to Cart</button>' }
+                                ${arg.amount < 1 || arg.inStock == false ? '<button type="button" disabled style="font-size:14px">OUT OF STOCK</button>' : '<button type="button">Add to Cart</button>' }
                             </div>
                     
 
@@ -130,9 +149,15 @@ class Home
 
 
 
-    Array.from(document.querySelectorAll('.product-image')).map((arg)=>{arg.addEventListener('click',(arg)=>{showOneItem(arg.target.id)})})
+    Array.from(document.querySelectorAll('.product-image')).map((arg)=>{arg.addEventListener('click',(e)=>{showOneItem(e.target.id)})})
+    
 
-    //document.querySelector("video").src = "../Static/Assets/intro-3.ogv" this.getAttribute('name')
+    document.querySelector("#create-p").addEventListener("click",()=>{createNewProduct()})
+
+
+
+
+
     }
 }
 

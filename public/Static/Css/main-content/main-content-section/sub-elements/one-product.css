@@ -1,0 +1,227 @@
+#oneProductContainer{
+    padding: 30px 30px;
+    height: 970px;
+    width: 80vw;
+    align-items: center;
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 51px;
+    border: 2px #272727 solid;
+    box-shadow: 0 7px 15px rgba(0,0,0,0.25);
+    border-top: 2px solid rgb(255 255 255 / 29%);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(255,255,255,0.21332282913165268) 0%, rgba(255,255,255,0.04) 100%);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    z-index: 98 !important;
+  }
+  
+
+  dialog::backdrop {
+    background: rgb(0 0 0 / 91%);
+    z-index: 97 !important;
+  }
+
+  #dialog-exit-button{
+    grid-area: 1/ 11;
+    place-self: flex-start;
+    cursor: pointer;
+    font-family: 'JuliusSansOne';
+    text-shadow: 1px 1px 4px white !important;
+    font-size: 1rem;
+    transform: scaleX(1.5);
+  }
+
+  #dialog-edit-button{
+    grid-area: 1/10;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'AvenirL';
+    background-color: hsl(51deg 98% 65% / 69%);
+    color: hsl(51 97.8% 12.1%);
+    border-radius: 50px;
+    width: 73px;
+    justify-self: center;
+    height: 27px;
+    text-align: center;
+    line-height: 30px;
+    align-self: flex-start;
+  }
+
+  dialog img{
+    grid-column: 1/5;
+    grid-row: 1/6;
+    display: block;
+    object-fit: contain;
+    aspect-ratio: 4 / 3;
+    border-radius: 29px;
+    place-self: center;
+  }
+
+  #dialog-name{
+    grid-column: 5/11;
+    grid-row: 2;
+    font-family: 'JuliusSansOne';
+    font-size: 3rem;
+    padding-left: 18px;
+    align-self: flex-start;
+  }
+
+  #dialog-category{
+    grid-column: 5/11;
+    grid-row: 2;
+    padding-left: 24px;
+    font-family: 'JuliusSansOne';
+    font-size: 12px;
+    margin-top: -36px;
+    align-self: center;
+ }
+
+
+#dialog-des{
+    grid-column: 5/11;
+    grid-row: 2;
+    padding-left: 18px;
+    font-family: 'JuliusSansOne';
+    line-height: 30px;
+    align-self: flex-start;
+    margin-top: 131px;
+}
+
+#dialog-des span{
+    font-size: 15px;
+    font-family: 'AvenirL';
+}
+
+
+#dialog-spec{
+    grid-column: 5/11;
+    grid-row: 3;
+    padding-left: 18px;
+    font-family: 'JuliusSansOne';
+    line-height: 30px;
+    align-self: end;
+    margin-top: 57px;
+}
+
+#dialog-spec span:nth-child(2){
+    font-size: 14px;
+    font-family: 'AvenirL';
+}
+#dialog-spec span:nth-child(4){
+    font-size: 10px;
+}
+
+
+#dialog-price{
+    grid-column: 5/7;
+    grid-row: 4;
+    padding-left: 18px;
+    font-family: 'JuliusSansOne';
+    font-weight: 900;
+    color: #d0c288;
+    font-size: 67px;
+    word-spacing: -25px;
+}
+
+#dialog-stock{
+    grid-column: 9;
+    grid-row: 4;
+    justify-self: center;
+    font-family: 'JuliusSansOne';
+    font-size: 15px;
+    align-self: baseline;
+    /* transform: translateY(23px); */
+}
+
+
+
+  
+#dialog-buy-button-con{
+    grid-column: 9;
+    grid-row: 4;
+    place-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #1a8430;
+    width: 160px;
+    border-radius: 38px;
+  }
+  
+  
+  
+  .btn {
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .btn:hover {
+    text-decoration: none;
+  }
+  
+  /*btn_background*/
+  .effect04 {
+    --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+    display: var(--uismLinkDisplay);
+    /* color: #000; */
+    /* outline: solid  2px #000; */
+    position: relative;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    border-radius: 38px;
+    font-size: 18px;
+    font-family: 'JuliusSansOne';
+  }
+  
+  .effect04::before,
+  .effect04 span{
+      margin: 0 auto;
+      transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+      transition-duration: 0.4s;
+  }
+  
+  
+  .effect04:hover{
+  
+    background-color: #000;
+  }
+  
+  .effect04:hover span{
+    -webkit-transform: translateY(-400%) scale(-0.1,20);
+            transform: translateY(-400%) scale(-0.1,20);
+  }
+  
+  
+  .effect04::before{
+    content: attr(data-sm-link-text);
+      color: #FFF;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-transform: translateY(500%) scale(-0.1,20);
+            transform: translateY(500%) scale(-0.1,20);
+  }
+  
+  
+  .effect04:hover::before{
+    letter-spacing: 0.05em;
+    -webkit-transform: translateY(0) scale(1,1);
+            transform: translateY(0) scale(1,1);
+  }
+  
