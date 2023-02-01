@@ -30,7 +30,6 @@ export default async function Navigation(props)
                     <li class="nav-unselected ${props === 'Home' ? 'nav-selected' : '' }"><a href='/#/'>Home</a></li>
                     <li class="nav-unselected ${props === 'Products' ? 'nav-selected' : '' }"><a href='/#/'>Products</a></li>
                     <li class="nav-unselected ${props === 'About' ? 'nav-selected' : '' }"><a href='/#/about'>About</a></li>
-                    <li class="nav-unselected ${props === 'Projects' ? 'nav-selected' : '' }"><a href='/#/projects'>Projects</a></li>
                 </menu>
             
             </section>

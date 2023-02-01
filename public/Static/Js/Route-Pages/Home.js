@@ -170,7 +170,7 @@ class Home
            return arg.name.toLowerCase().includes(e.target.value.toLowerCase().trim())
         })
 
-        console.log(filteredData)
+    
 
         document.querySelector("#search-show-con").innerHTML = `
 
@@ -236,5 +236,3 @@ class Home
 export const home = new Home()
 
 
-
-/* style=" background: url(${arg.imageURL}) center/contain no-repeat;" */

@@ -11,7 +11,6 @@ async function showOneItem(arg)
     
  let item = await (async()=>{ let res = await fetch(`/get_specific_product/${arg}`); let data = await res.json(); return data })()
  
-console.log(item)
  
  const body = document.querySelector('body')
  const fragment = document.createDocumentFragment() // create and append new elements faster with method
@@ -72,7 +71,7 @@ console.log(item)
 
       document.querySelector("#dialog-buy-button")?.addEventListener("click",async(e)=>
       {
-        let result = await makeBuy(item[0]._id);console.log(result)
+        let result = await makeBuy(item[0]._id);//console.log(result)
        
         document.querySelector('#oneProductContainer').remove()
 

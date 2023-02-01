@@ -70,7 +70,7 @@
     height: 10px;
     background: #a52a2a;
     z-index: 5;
-    transform: translate(31%, 27%);
+    transform: translate(calc((91vh / 2) - 27rem ), 27%);
     border-radius: 27px;
     padding: 20px;
     transition: all 2s;
@@ -136,9 +136,32 @@
 .search > div > input:focus,
 .search > div > input:not(:placeholder-shown) 
 {
-    width: 100vh;
+    width: 59vh;
+    max-width: 66vw;
 }
-  
+
+@media screen and (max-width: 2240px) 
+{
+    .search > div > input:focus,.search > div > input:not(:placeholder-shown){width: 59vh;max-width: 66vw;}
+    #search-show-con{transform: translate(calc((91vh / 2) - 30rem ), 27%);}
+}
+@media screen and (max-width: 1555px){#search-show-con{transform: translate(calc((91vh / 2) - 31rem ), 27%);}}
+@media screen and (max-width: 1500px){#search-show-con{transform: translate(calc((91vh / 2) - 32rem ), 27%);}}
+@media screen and (max-width: 1415px){#search-show-con{transform: translate(calc((91vh / 2) - 34rem ), 27%);}}
+@media screen and (max-width: 1370px){#search-show-con{transform: translate(calc((91vh / 2) - 36rem ), 27%);}}
+@media screen and (max-width: 1275px){#search-show-con{transform: translate(calc((91vh / 2) - 42rem ), 27%);}}
+@media screen and (max-width: 1101px){#search-show-con{transform: translate(calc((91vh / 2) - 49rem ), 27%);}}
+@media screen and (max-width: 1050px){#search-show-con{transform: translate(calc((91vh / 2) - 48rem ), 27%);}}
+@media screen and (max-width: 986px){#search-show-con{transform: translate(calc((91vh / 2) - 46rem ), 27%);}}
+@media screen and (max-width: 921px){#search-show-con{transform: translate(calc((91vh / 2) - 51rem ), 27%);}}
+@media screen and (max-width: 791px){#search-show-con{transform: translate(calc((91vh / 2) - 50rem ), 27%);}}
+@media screen and (max-width: 756px){#search-show-con{transform: translate(calc((91vh / 2) - 49rem ), 27%);}}
+@media screen and (max-width: 723px){#search-show-con{transform: translate(calc((91vh / 2) - 48.5rem ), 27%);}}
+@media screen and (max-width: 705px){#search-show-con{transform: translate(calc((91vh / 2) - 47.5rem ), 27%);}}
+@media screen and (max-width: 667px){#search-show-con{transform: translate(calc((91vh / 2) - 46.5rem ), 27%);}}
+@media screen and (max-width: 649px){#search-show-con{transform: translate(calc((91vh / 2) - 46.5rem ), 27%);}}
+@media screen and (max-width: 621px){#search-show-con{transform: translate(calc((91vh / 2) - 50.5rem ), 27%);}}
+
 
 
 
@@ -181,3 +204,4 @@
     padding: 7px;
     line-height: 23px;
 }
+    @media screen and (max-width: 1000px){#filtered-product{max-height: 10rem;}}
